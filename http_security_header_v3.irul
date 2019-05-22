@@ -1,0 +1,8 @@
+when HTTP_RESPONSE {
+  #X-XSS-Protection
+  HTTP::header insert X-XSS-Protection "1; mode=block"
+  #X-Frame-Options
+  HTTP::header insert X-Frame-Options "SAMEORIGIN"
+  #X-Content-Type-Options
+  HTTP::header insert X-Content-Type-Options "nosniff"
+}
