@@ -1,0 +1,5 @@
+when HTTP_RESPONSE {
+    foreach mycookie [HTTP::cookie names] {
+    HTTP::cookie secure $mycookie enable
+   }
+}
